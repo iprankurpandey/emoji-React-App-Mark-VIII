@@ -1,13 +1,15 @@
 import "./styles.css";
-import Ink from "react-ink";
-let headingText = "your name";
-let color = "purple";
+
+// let headingText = "your name";
+// let color = "purple";
+function likeClickHandler() {
+  console.log("clicked");
+}
 export default function App() {
   return (
     <div className="App">
-      <h1>
-        welcome <span style={{ backgroundColor: color }}> {headingText}</span>
-      </h1>
+      <h1>inside out</h1>
+      <button onClick={likeClickHandler}>Like </button>
     </div>
   );
 }
