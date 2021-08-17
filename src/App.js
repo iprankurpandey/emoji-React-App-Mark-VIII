@@ -5,7 +5,7 @@ import "./styles.css";
 let likeCounter = 0;
 function likeClickHandler() {
   likeCounter++;
-  console.log(likeCounter);
+  console.log("clicked :", likeCounter);
 }
 export default function App() {
   return (
