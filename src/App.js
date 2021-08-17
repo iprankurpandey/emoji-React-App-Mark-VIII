@@ -1,6 +1,6 @@
 import "./styles.css";
 // let headingText =
-let username = prompt("give me your name");
+let username = "Prankur";
 let color = "blue";
 export default function App() {
   return (
