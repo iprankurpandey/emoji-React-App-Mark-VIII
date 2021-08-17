@@ -18,3 +18,27 @@ export default function App() {
     </div>
   );
 }
+
+console.log(
+  "-------------------------------------------------------------------------------------"
+);
+
+import "./styles.css";
+
+// let headingText = "your name";
+// let color = "purple";
+let likecounter = 0;
+
+function likeClickHandler() {
+  let newLikecounter = likecounter++;
+  console.log(newLikecounter);
+}
+export default function App() {
+  return (
+    <div className="App">
+      <h1>inside out</h1>
+      <button onClick={likeClickHandler}>Like </button>
+      {likecounter}
+    </div>
+  );
+}
