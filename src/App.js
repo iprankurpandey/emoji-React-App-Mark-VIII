@@ -2,10 +2,10 @@ import "./styles.css";
 
 // let headingText = "your name";
 // let color = "purple";
-let count = 0;
+let likeCounter = 0;
 function likeClickHandler() {
-  count++;
-  console.log(count);
+  likeCounter++;
+  console.log(likeCounter);
 }
 export default function App() {
   return (
