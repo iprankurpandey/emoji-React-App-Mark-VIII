@@ -6,7 +6,7 @@ export default function App() {
   function likeClickHandler() {
     var newLikeCounter = LikeCounter + 1;
     setlikeCounter(newLikeCounter); //confused
-    console.log("LikeCounter", LikeCounter);
+    console.log("LikeCounter", LikeCounter); //process to output the value on display
   }
 
   return (
