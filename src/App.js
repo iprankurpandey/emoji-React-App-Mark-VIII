@@ -10,7 +10,9 @@ const emojiDictionary = {
 };
 export default function App() {
   function emojiInputHandler(event) {
-    console.log(event.target.value);
+    let userInput = event.target.value;
+    let meaning = emojiDictionary[userInput];
+    console.log(meaning);
   }
   return (
     <div className="App">
