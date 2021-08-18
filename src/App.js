@@ -9,6 +9,8 @@ const emojiDictionary = {
   "😍": "adoration",
   "❤️": "Red Heart"
 };
+let emojisWeKnow = Object.keys(emojiDictionary);
+
 export default function App() {
   const [meaning, setMeaning] = useState(" ");
   function emojiInputHandler(event) {
@@ -21,11 +23,27 @@ export default function App() {
     }
     setMeaning(meaning);
   }
+  function emojiClickHandler(emoji) {
+    let meaning = emojiDictionary[emoji];
+    setMeaning(meaning);
+  }
   return (
     <div className="App">
       <h1>inside out</h1>
       <input onChange={emojiInputHandler} />
       <h2>{meaning}</h2>
+      <h3>emojis we know </h3>
+      {emojisWeKnow.map(function (emoji) {
+        return (
+          <span
+            onClick={() => emojiClickHandler(emoji)}
+            style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
+            key={emoji}
+          >
+            {emoji}
+          </span>
+        );
+      })}
     </div>
   );
 }
