@@ -1,44 +1,22 @@
-import React, { useState } from "react";
-import { render } from "react-dom";
+import React from "react";
 import "./styles.css";
 
+const emojiDictionary = {
+  "😂": "Extreme Happiness",
+  "🤣": "hysterical laughter",
+  "😊": "neutral Happiness",
+  "😍": "adoration",
+  "❤️": "Red Heart"
+};
 export default function App() {
-  const [LikeCounter, setlikeCounter] = useState(0);
-  function likeClickHandler() {
-    var newLikeCounter = LikeCounter + 1;
-    setlikeCounter(newLikeCounter); //confused
-    //process to output the value on display
+  function emojiInputHandler(event) {
+    console.log(event.target.value);
   }
-  console.log("LikeCounter", LikeCounter);
+
   return (
     <div className="App">
       <h1>inside out</h1>
-      <button onClick={likeClickHandler}>Like </button>
-      {LikeCounter}
-    </div>
-  );
-}
-
-console.log(
-  "-------------------------------------------------------------------------------------"
-);
-
-import "./styles.css";
-
-// let headingText = "your name";
-// let color = "purple";
-let likecounter = 0;
-
-function likeClickHandler() {
-  let newLikecounter = likecounter++;
-  console.log(newLikecounter);
-}
-export default function App() {
-  return (
-    <div className="App">
-      <h1>inside out</h1>
-      <button onClick={likeClickHandler}>Like </button>
-      {likecounter}
+      <input onChnage={emojiInputHandler} />
     </div>
   );
 }
