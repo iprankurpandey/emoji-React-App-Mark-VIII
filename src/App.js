@@ -12,11 +12,10 @@ export default function App() {
   function emojiInputHandler(event) {
     console.log(event.target.value);
   }
-
   return (
     <div className="App">
       <h1>inside out</h1>
-      <input onChnage={emojiInputHandler} />
+      <input onChange={emojiInputHandler} />
     </div>
   );
 }
