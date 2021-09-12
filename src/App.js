@@ -7,7 +7,23 @@ const emojiDictionary = {
   "🤣": "hysterical laughter",
   "😊": "neutral Happiness",
   "😍": "adoration",
-  "❤️": "Red Heart"
+  "❤️": "Red Heart",
+  "😃": "Grinning Face with Big Eyes",
+  "😄": "Grinning Face with Smiling Eyes",
+  "😁": " Beaming Face with Smiling Eyes",
+  "😆": " Grinning Squinting Face",
+  "😅": " Grinning Face with Sweat",
+  "🤣": " Rolling on the Floor Laughing",
+  "😂": " Face with Tears of Joy",
+  "🙃": " Upside-Down Face",
+  "😉": " Winking Face",
+  "😊": " Smiling Face with Smiling Eyes",
+  "😇": " Smiling Face with Halo",
+  "🥰": " Smiling Face with Hearts",
+  "😍": " Smiling Face with Heart-Eyes",
+  "🤩": " Star-Struck",
+  "😘": " Face Blowing a Kiss",
+
 };
 let emojisWeKnow = Object.keys(emojiDictionary);
 
@@ -29,7 +45,7 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1>inside out</h1>
+      <h1>know your emojis</h1>
       <input onChange={emojiInputHandler} />
       <h2>{meaning}</h2>
       <h3>emojis we know </h3>
